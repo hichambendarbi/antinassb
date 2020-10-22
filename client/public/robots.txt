@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: https://www.antinassb.com/administration
+Disallow: https://www.antinassb.com/administration/conflicts
+Disallow: https://www.antinassb.com/administration/verifyNewPoste
+Disallow: https://www.antinassb.com/administration/msg
+Disallow: https://www.antinassb.com/administration/advertising
+Disallow: https://www.antinassb.com/dashboard
+Disallow: https://www.antinassb.com/edit-profile
+Sitemap:  https://antinassb.com/sitemap.xml 
