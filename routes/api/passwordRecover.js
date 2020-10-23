@@ -15,8 +15,8 @@ port: 25,
 secure: false,
 requireTLS: true,
 auth: {
-user: "antinassb@gmail.com",
-pass: "antinassb@4555666"
+user: config.get('email'),
+pass: config.get('password')
 }, tls: { 
     rejectUnauthorized: false
 }
@@ -24,7 +24,8 @@ pass: "antinassb@4555666"
 
 const getPasswordResetURL = (user, token) =>
 `https://antinassb.com/password/${user._id}/${token}`
-// `https://192.168.1.11:3000/password/${user._id}/${token}`
+// `http://192.168.1.12:3000/password/${user._id}/${token}`
+// `https://antinassb.com/password/${user._id}/${token}`
 // `http://localhost:3000/password/${user._id}/${token}`
 
 const resetPasswordTemplate = (user, url) => {
@@ -415,7 +416,6 @@ const html = `
       <tr>
           <td></td>
           <td class="header container">
-              
                   <div class="content">
                       <table bgcolor="#F4F5F6">
                       <tr>
@@ -424,7 +424,6 @@ const html = `
                       </tr>
                   </table>
                   </div>
-                  
           </td>
           <td></td>
       </tr>
@@ -481,12 +480,10 @@ const html = `
                                       <!--- column 2 -->
                                       <table align="left" class="column">
                                           <tr>
-                                              <td>				
-                                                                              
+                                              <td>                     
                                                   <h5 class="">Vous avez des questions ?</h5>												
                                                   <p>Telephone et whatsapp: <strong>+212 657962008</strong><br/>
-                  Email: <strong><a href="emailto:antinassb@support.com">antinassb@support.com</a></strong></p>
-                  
+                                                  Email: <strong><a href="emailto:antinassb@support.com">antinassb@support.com</a></strong></p>
                                               </td>
                                           </tr>
                                       </table><!-- /column 2 -->

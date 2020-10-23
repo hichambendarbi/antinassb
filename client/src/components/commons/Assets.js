@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 
-
-
 export const AuthContainer = styled.div`
 width: 600px;
 flex-direction: column;
@@ -23,12 +21,13 @@ export const Retour = styled(Link)`
 cursor: pointer;
 padding: 12px 25px;
 left: 30px;
-border-bottom: 4px solid #343a40;
+border-bottom: 4px solid #201f1f;
 font-weight: 900;
-box-shadow: 0 2px 2px -2px grey;
+box-shadow: 0 2px 2px -2px #020202;
 text-decoration: none;
 color: #e66e07;
-margin: 0 auto;
+text-align: center;
+background: #1c1919;
 `
 
 export const AuthNavigation = styled.div`
@@ -38,7 +37,6 @@ align-items: center;
 display: flex;
 justify-content: space-between;
 border-bottom: 2px solid #e66e07;
-border-top: 2px solid #e66e07;
 margin-top: 30px;
 `
 

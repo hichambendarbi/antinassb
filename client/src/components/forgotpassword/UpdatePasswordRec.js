@@ -54,7 +54,7 @@ return (
 <AuthContainer style={{paddingTop:"20px"}}>
 <Retour to="/">تغيير كلمة المرور</Retour>
 <ContainerInputs>
-{submitted ? <Redirect to='/login'/>
+{submitted ? <Redirect to='/تسجيل-الدخول'/>
 : <Fragment>
 <FloatingLabelInput type="password" placeholder="كلمة السر الجديدة" name="password" value={this.state.password} onChange={this.handleChange("password")}/>
 <FloatingLabelInput type="password" placeholder="تأكيد كلمة السر" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange("confirmPassword")}/>
@@ -62,7 +62,8 @@ return (
 <Button type="submit">إرسال</Button>
 <FooterLogin>
 <span>تصبح هذه الصفحة غير صالحة بعد ساعة</span>
-<Link to="/login" style={{color: "#FFF", textDecoration: "none"}}>تسجيل الدخول</Link>
+<Link to="/تسجيل-الدخول" style={{color: "#FFF", textDecoration: "none"}}>
+    تسجيل الدخول</Link>
 </FooterLogin>
 </ContainerInputs>
 </AuthContainer>

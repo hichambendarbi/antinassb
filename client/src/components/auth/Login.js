@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import FloatingLabelInput from '../commons/FloatingLabelInput'
+import styled from 'styled-components'
 import {Retour,AuthNavigation,Links,ContainerInputs,Button,FooterLogin,AuthContainer} from "../commons/Assets"
 import Sendemail from '../forgotpassword/Sendemail'
 import { login } from '../../controlers/auth'
@@ -8,7 +9,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 const Login = ({ login, isAuthenticated }) => {
-  
 
     const [formData, setFormData] = useState ({ 
         email :'',
@@ -33,10 +33,12 @@ const Login = ({ login, isAuthenticated }) => {
       
     return (
      <AuthContainer>
-         <Retour to="/"><h1 style={{fontSize:"20px"}}>
+         <Retour to="/">
+             <TitleAuth style={{fontSize:"20px"}}>
               {/* <Logo width='140px'/> */}
               تسجيل الدخول
-             </h1></Retour>
+             </TitleAuth>
+         </Retour>
          <AuthNavigation>
              <Links className="test" to="/تسجيل-الدخول" style={{color: "#f5770b"}} >
                  <h2 style={{fontSize:"14px", margin: "0"}}>تسجيل الدخول</h2>
@@ -67,4 +69,9 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps , {login})(Login)
+
+const TitleAuth = styled.h1`
+font-size: 25px;
+font-weight: 600;
+`
 
